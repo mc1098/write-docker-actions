@@ -1,6 +1,13 @@
-FROM golang:latest
-WORKDIR /go/src/hello
+FROM mcr.microsoft.com/dotnet/core:3.0
+WORKDIR /src 
 COPY . .
-RUN go get -d -v ./...
-RUN go install -v ./...
-CMD ["hello"]
+RUN dotnet build 
+RUN dotnet run 
+
+
+# FROM golang:latest
+# WORKDIR /go/src/hello
+# COPY . .
+# RUN go get -d -v ./...
+# RUN go install -v ./...
+# CMD ["hello"]
