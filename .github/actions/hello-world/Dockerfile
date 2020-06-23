@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk
 WORKDIR /src 
 COPY . .
 RUN dotnet build 
-RUN dotnet run 
+ENTRYPOINT ["dotnet", "run"]
 
 
 # FROM golang:latest
