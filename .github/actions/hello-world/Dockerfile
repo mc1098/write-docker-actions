@@ -14,11 +14,3 @@ FROM mcr.microsoft.com/dotnet/core/aspnet
 WORKDIR /app 
 COPY --from=build-env /app/out . 
 ENTRYPOINT ["dotnet", "hello-world.dll"]
-
-
-# FROM golang:latest
-# WORKDIR /go/src/hello
-# COPY . .
-# RUN go get -d -v ./...
-# RUN go install -v ./...
-# CMD ["hello"]
