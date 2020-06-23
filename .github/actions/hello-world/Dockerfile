@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core:latest
+FROM mcr.microsoft.com/dotnet/core/sdk
 WORKDIR /src 
 COPY . .
 RUN dotnet build 
